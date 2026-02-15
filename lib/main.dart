@@ -126,98 +126,71 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
 
-          SizedBox(
-            
-            
-            child: ListView.builder(
-              scrollDirection: Axis.vertical,
-              itemCount: userData.length,
-              itemBuilder: (context, index) {
-                final user = userData[index];
-                return Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10.0,
-                    vertical: 8.0,
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: NetworkImage(user['image']!),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Text(
-                              user['name']!,
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Expanded(child: Container()),
-                            Icon(Icons.more_horiz),
-                          ],
+          Expanded(
+          child: ListView.builder(
+            scrollDirection: Axis.vertical,
+            itemCount: userData.length,
+            itemBuilder: (context, index) {
+              final user = userData[index];
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Header: Avatar + Name
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 18,
+                            backgroundImage: NetworkImage(user['image']!),
+                          ),
+                          const SizedBox(width: 10),
+                          Text(
+                            user['name']!,
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          const Spacer(),
+                          const Icon(Icons.more_horiz),
+                        ],
+                      ),
+                    ),
+
+                    const SizedBox(height: 10),
+
+                    // The Main Post Image
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child: Image.network(
+                          user['image']!,
+                          height: 400,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      SizedBox(height: 5),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: ClipRRect(
-                                
-                                borderRadius: BorderRadius.circular(15),
-                                child: Image.network(
-                                  user['image']!,
-                                  height:400,
-                                  width: double.infinity, 
-                                  fit: BoxFit.cover,
-                                  errorBuilder: (context, error, stackTrace) =>
-                                      Container(
-                                        height: 500,
-                                        color: Colors.grey,
-                                        child: Icon(Icons.error),
-                                      ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 2),
-                      Row(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.favorite_border_outlined,size:25),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.messenger_outline,size:25),
-                          ),
-                          Expanded(child: Container()),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.bookmark_border_outlined,size:25),
-                          ),
-                        ],
-                      ),
-        ]),);
-              },
-            ),
+                    ),
+
+                    // Action Buttons
+                    Row(
+                      children: [
+                        IconButton(onPressed: () {}, icon: const Icon(Icons.favorite_border)),
+                        IconButton(onPressed: () {}, icon: const Icon(Icons.chat_bubble_outline)),
+                        IconButton(onPressed: () {}, icon: const Icon(Icons.send_outlined)),
+                        const Spacer(),
+                        IconButton(onPressed: () {}, icon: const Icon(Icons.bookmark_border)),
+                      ],
+                    ),
+                  ],
+                ),);
+            },
           ),
-        ],
+        
+
+       ),
+         ],
       ),
     );
   }
