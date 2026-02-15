@@ -130,26 +130,53 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),
             child: Column(
               children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children:[
+                      Container(
+                        width:40,
+                        height:40,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: NetworkImage(user['image']!),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Text(user['name']!, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                      Expanded(child: Container()), 
+                      Icon(Icons.more_horiz),
+                    ]
+                  ),
+                ),
+                SizedBox(height: 5),
                 Row(
                   children:[
-                    Container(
-                      width:40,
-                      height:40,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                          image: NetworkImage(user['image']!),
-                          fit: BoxFit.cover,
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          
+                          height: 500,
+                          
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(15)),
+                            image: DecorationImage(
+                              image: NetworkImage(user['image']!),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
                       ),
                     ),
-                    SizedBox(width: 10),
-                    Text(user['name']!, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-                    Expanded(child: Container()), 
-                    Icon(Icons.more_horiz),
+                    
+                  
                   ]
                 ),
-                Row(),
+                SizedBox(height: 10),
                 Row(),
               ],
             ),
