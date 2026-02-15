@@ -190,7 +190,16 @@ class _MyHomePageState extends State<MyHomePage> {
                         const SizedBox(width: 12),
                         Text(user['name']! , style: const TextStyle(fontWeight: FontWeight.bold)),
                         SizedBox(width: 8),
-                       Icon(Icons.verified, size: 18, color: Colors.blue)
+                       Icon(Icons.verified, size: 18, color: Colors.blue),
+                        Text("Liked by ${user['name']} and others", style: TextStyle(color: Colors.grey[600])),
+                      ],
+                    ),
+
+                    Row(
+                      children: [
+                        const SizedBox(width: 12),
+                        SizedBox(height:8),
+                        Text("View all comments", style: TextStyle(color: Colors.grey[600])),
                       ],
                     ),
                   ],
