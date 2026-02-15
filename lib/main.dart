@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final List<Map<String, String>> userData = [
     {"name": "Ruth", "image": "https://i.pravatar.cc/150?u=1"},
-    {"name": "Moa", "image": "https://i.pravatar.cc/150?u=2"},
+    {"name": "Tedros", "image": "https://i.pravatar.cc/150?u=2"},
     {"name": "I B", "image": "https://i.pravatar.cc/150?u=3"},
     {"name": "Bruk", "image": "https://i.pravatar.cc/150?u=4"},
     {"name": "Ezana", "image": "https://i.pravatar.cc/150?u=5"},
