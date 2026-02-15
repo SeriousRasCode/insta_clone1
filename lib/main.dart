@@ -194,11 +194,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
-          BottomNavigationBarItem(icon: Icon(Icons.add_box_outlined), label: "Add"),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: "Likes"),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), label: "Profile"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.search),label: "" ),
+          BottomNavigationBarItem(icon: Icon(Icons.add_box_outlined),label: "" ),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite_border),label: "" ),
+          BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined),label: ""),
         ],
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.grey,
