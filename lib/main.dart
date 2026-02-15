@@ -161,7 +161,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                     const SizedBox(height: 10),
 
-                    // The Main Post Image
+                    
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: ClipRRect(
@@ -175,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
 
-                    // Action Buttons
+                    
                     Row(
                       children: [
                         IconButton(onPressed: () {}, icon: const Icon(Icons.favorite_border)),
@@ -183,6 +183,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         IconButton(onPressed: () {}, icon: const Icon(Icons.send_outlined)),
                         const Spacer(),
                         IconButton(onPressed: () {}, icon: const Icon(Icons.bookmark_border)),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const SizedBox(width: 12),
+                        Text(user['name']! , style: const TextStyle(fontWeight: FontWeight.bold)),
+                        SizedBox(width: 8),
+                       Icon(Icons.verified, size: 18, color: Colors.blue)
                       ],
                     ),
                   ],
