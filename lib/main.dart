@@ -117,6 +117,46 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
     ),
+
+    SizedBox(
+      height:310,
+       // Adjusted height to fit text below circle
+      child: ListView.builder(
+        scrollDirection: Axis.vertical,
+        itemCount: userData.length,
+        itemBuilder: (context, index) {
+          final user = userData[index];
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),
+            child: Column(
+              children: [
+                Row(
+                  children:[
+                    Container(
+                      width:40,
+                      height:40,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: NetworkImage(user['image']!),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Text(user['name']!, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                    Expanded(child: Container()), 
+                    Icon(Icons.more_horiz),
+                  ]
+                ),
+                Row(),
+                Row(),
+              ],
+            ),
+          );
+        },
+      ),
+    ),
      
   ],
 ),
