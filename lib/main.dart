@@ -42,12 +42,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Theme.of(context).colorScheme.onPrimary,
         elevation: 5,
-        title: Text("Instagram"),
+        title: Text("Instagram", style:TextStyle(color: Colors.black,fontWeight:FontWeight.bold)),
         actions: [
           IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border_outlined)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.messenger_outlined)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.messenger_outline)),
         ],
       ),
       body: Column(
@@ -61,8 +61,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.grey[300],
                 child: Column(
                   children:[
-                    Row(),
-                    Row()
+                    Row(
+                      children:[
+                        Container(
+                          width: 50,
+                          height: 50,
+                          margin: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.blue,
+                          ),
+                        ),
+                        Text("User"),
+                      ],
+                    ),
+                    
                   ],
                 ),
               );
