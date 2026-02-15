@@ -158,22 +158,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          
-                          height: 500,
-                          
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(15)),
-                            image: DecorationImage(
-                              image: NetworkImage(user['image']!),
-                              fit: BoxFit.cover,
-                            ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Image.network(
+                            height: 500,
+                            user['image']!,
+                            fit: BoxFit.contain,
                           ),
                         ),
+
+                        ),
                       ),
-                    ),
-                    
-                  
                   ]
                 ),
                 SizedBox(height: 10),
