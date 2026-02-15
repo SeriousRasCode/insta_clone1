@@ -38,6 +38,13 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  final List<Map<String, String>> userData = [
+    {"name": "Tedros", "image": "https://i.pravatar.cc/150?u=1"},
+    {"name": "Moa", "image": "https://i.pravatar.cc/150?u=2"},
+    {"name": "Ezana", "image": "https://i.pravatar.cc/150?u=3"},
+  // Add as many as you like...
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
           ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: 10,
+            
             itemBuilder: (context, index) {
+              final user = userData[index];
               return Container(
                 height: 100,
                 color: Colors.grey[300],
