@@ -195,16 +195,21 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ],
                       ),
-                      SizedBox(height: 5),
+                      SizedBox(height: 2),
                       Row(
                         children: [
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.favorite_border_outlined),
+                            icon: Icon(Icons.favorite_border_outlined,size:25),
                           ),
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.messenger_outline),
+                            icon: Icon(Icons.messenger_outline,size:25),
+                          ),
+                          Expanded(child: Container()),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.bookmark_border_outlined,size:25),
                           ),
                         ],
                       ),
