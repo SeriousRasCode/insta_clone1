@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         children: [
           SizedBox(
-            height: 110, // Adjusted height to fit text below circle
+            height: 110, 
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: userData.length,
@@ -96,11 +96,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Padding(
                           padding: const EdgeInsets.all(
                             3.0,
-                          ), // The "border" thickness
+                          ), 
                           child: Container(
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.white, // Gap between ring and image
+                              color: Colors.white, 
                             ),
                             child: Padding(
                               padding: const EdgeInsets.all(2.0),
