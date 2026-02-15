@@ -137,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Header: Avatar + Name
+                    
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 12.0),
                       child: Row(
@@ -151,6 +151,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             user['name']!,
                             style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
+                          SizedBox(width:8),
+                          Icon(Icons.verified, size: 18, color: Colors.blue),
                           const Spacer(),
                           const Icon(Icons.more_horiz),
                         ],
@@ -200,7 +202,7 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.favorite_border),label: "" ),
           BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined),label: ""),
         ],
-        selectedItemColor: Colors.black,
+        selectedItemColor: const Color.fromARGB(255, 146, 110, 3),
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
         iconSize: 30,
