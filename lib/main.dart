@@ -51,7 +51,24 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: Column(
-
+        children:[
+          ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return Container(
+                height: 100,
+                color: Colors.grey[300],
+                child: Column(
+                  children:[
+                    Row(),
+                    Row()
+                  ],
+                ),
+              );
+            },
+          ),
+        ],
       ),
     );
   }
