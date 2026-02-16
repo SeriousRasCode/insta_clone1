@@ -125,6 +125,64 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
 
+          SizedBox(
+            height: 110, 
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: userData.length,
+              itemBuilder: (context, index) {
+                final user = userData[index];
+                return Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10.0,
+                    vertical: 8.0,
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 70,
+                        height: 70,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          gradient: LinearGradient(
+                            colors: [Colors.yellow, Colors.red, Colors.purple],
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(
+                            3.0,
+                          ), 
+                          child: Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white, 
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    image: NetworkImage(user['image']!),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Text(user['name']!, style: TextStyle(fontSize: 12)),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
+
           const SizedBox(height: 20),
 
           // Tab
