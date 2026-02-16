@@ -110,9 +110,35 @@ class ProfilePage extends StatelessWidget {
                     child: const Text("Share Profile", style: TextStyle(color: Colors.black, fontSize: 13)),
                   ),
                 ),
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      side: BorderSide(color: Colors.grey.shade300),
+                    ),
+                    child: const Text("Contact", style: TextStyle(color: Colors.black, fontSize: 13)),
+                  ),
+                ),
               ],
             ),
           ),
+
+          const SizedBox(height: 20),
+
+          // Tab
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Icon(Icons.grid_on),
+              ),
+              Icon(Icons.video_collection_outlined, color: Colors.grey),
+              Icon(Icons.person_pin_outlined, color: Colors.grey),
+            ],
+          ),
+          const Divider(height: 1, thickness: 1),
     );
   }
 
