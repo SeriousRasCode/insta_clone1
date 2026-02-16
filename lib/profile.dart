@@ -129,9 +129,9 @@ class ProfilePage extends StatelessWidget {
             height: 110, 
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: userData.length,
+              itemCount: profileData.length,
               itemBuilder: (context, index) {
-                final user = userData[index];
+                final user = profileData[index];
                 return Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 10.0,
@@ -165,7 +165,7 @@ class ProfilePage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   image: DecorationImage(
-                                    image: NetworkImage(user['image']!),
+                                    image: NetworkImage(user['profilePic']!),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -175,7 +175,6 @@ class ProfilePage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 5),
-                      Text(user['name']!, style: TextStyle(fontSize: 12)),
                     ],
                   ),
                 );
