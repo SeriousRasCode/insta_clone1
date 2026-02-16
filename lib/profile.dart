@@ -140,7 +140,28 @@ class ProfilePage extends StatelessWidget {
           ),
           const Divider(height: 1, thickness: 1),
 
-          
+          // Grid
+          GridView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: profileData["posts"],
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+              crossAxisSpacing: 2,
+              mainAxisSpacing: 2,
+            ),
+            itemBuilder: (context, index) {
+              return Container(
+                color: Colors.grey[200],
+                child: Image.network(
+                  "https://picsum.photos/id/${index + 20}/300/300",
+                  fit: BoxFit.cover,
+                ),
+              );
+            },
+          ),
+        ],
+      ),
 
     );
   }
