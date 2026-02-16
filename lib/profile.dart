@@ -86,7 +86,7 @@ class ProfilePage extends StatelessWidget {
 
           // Edit Pro,Share Btn
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Row(
               children: [
                 Expanded(
@@ -99,7 +99,7 @@ class ProfilePage extends StatelessWidget {
                     child: const Text("Edit Profile", style: TextStyle(color: Colors.black, fontSize: 13)),
                   ),
                 ),
-                const SizedBox(width: 8),
+                const SizedBox(width: 5),
                 Expanded(
                   child: OutlinedButton(
                     onPressed: () {},
@@ -110,6 +110,7 @@ class ProfilePage extends StatelessWidget {
                     child: const Text("Share Profile", style: TextStyle(color: Colors.black, fontSize: 13)),
                   ),
                 ),
+                const SizedBox(width: 5),
                 Expanded(
                   child: OutlinedButton(
                     onPressed: () {},
