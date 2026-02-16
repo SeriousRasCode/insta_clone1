@@ -83,6 +83,36 @@ class ProfilePage extends StatelessWidget {
           ),
 
           const SizedBox(height: 15),
+
+          // Edit Pro,Share Btn
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      side: BorderSide(color: Colors.grey.shade300),
+                    ),
+                    child: const Text("Edit Profile", style: TextStyle(color: Colors.black, fontSize: 13)),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      side: BorderSide(color: Colors.grey.shade300),
+                    ),
+                    child: const Text("Share Profile", style: TextStyle(color: Colors.black, fontSize: 13)),
+                  ),
+                ),
+              ],
+            ),
+          ),
     );
   }
 
