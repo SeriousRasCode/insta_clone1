@@ -60,7 +60,29 @@ class ProfilePage extends StatelessWidget {
                 MyStatColumn(profileData["following"].toString(), "Following"),
               ],
             ),
-          ),,
+          ),
+
+          // My Bio 
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  profileData["name"],
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text(profileData["bio"]),
+                Text(profileData["description"]),
+                Text(
+                  profileData["link"],
+                  style: const TextStyle(color: Colors.blue),
+                ),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 15),
     );
   }
 
