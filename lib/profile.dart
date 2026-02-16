@@ -58,10 +58,28 @@ class ProfilePage extends StatelessWidget {
                 
 
 
-                
+
               ],
             ),
           ),,
+    );
+  }
+
+  // Reusable COmponent For Stats part I have
+  Column MyStatColumn(String value, String label) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          value,
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
+        Text(
+          label,
+          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+        ),
+      ],
     );
   }
 }
