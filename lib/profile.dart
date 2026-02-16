@@ -126,56 +126,26 @@ class ProfilePage extends StatelessWidget {
           ),
 
           SizedBox(
-            height: 110, 
+            height: 90,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: profileData.length,
+              itemCount: 3,
               itemBuilder: (context, index) {
-                final user = profileData[index];
                 return Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 10.0,
                     vertical: 8.0,
                   ),
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 70,
-                        height: 70,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          gradient: LinearGradient(
-                            colors: [Colors.yellow, Colors.red, Colors.purple],
-                            begin: Alignment.bottomLeft,
-                            end: Alignment.topRight,
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(
-                            3.0,
-                          ), 
-                          child: Container(
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white, 
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(2.0),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  image: DecorationImage(
-                                    image: NetworkImage(user['profilePic']!),
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                  child: Container(
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: NetworkImage('https://i.pravatar.cc/150?u=${index + 5}'),
+                        fit: BoxFit.cover,
                       ),
-                      SizedBox(height: 5),
-                    ],
+                    ),
                   ),
                 );
               },
