@@ -55,10 +55,9 @@ class ProfilePage extends StatelessWidget {
                   radius: 40,
                   backgroundImage: NetworkImage(profileData["profilePic"]),
                 ),
-                
-
-
-
+                MyStatColumn(profileData["posts"].toString(), "Posts"),
+                MyStatColumn(profileData["followers"].toString(), "Followers"),
+                MyStatColumn(profileData["following"].toString(), "Following"),
               ],
             ),
           ),,
