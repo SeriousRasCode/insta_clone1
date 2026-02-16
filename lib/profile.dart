@@ -164,6 +164,20 @@ class ProfilePage extends StatelessWidget {
         ],
       ),
 
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.search),label: "" ),
+          BottomNavigationBarItem(icon: Icon(Icons.add_box_outlined),label: "" ),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite_border),label: "" ),
+          BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined),label: ""),
+        ],
+        selectedItemColor: const Color.fromARGB(255, 146, 110, 3),
+        unselectedItemColor: Colors.grey,
+        showUnselectedLabels: true,
+        iconSize: 30,
+    )
+
     );
   }
 
