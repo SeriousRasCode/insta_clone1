@@ -43,3 +43,25 @@ class ProfilePage extends StatelessWidget {
           ),
         ],
       ),
+      body:ListView(
+        children: [
+          
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CircleAvatar(
+                  radius: 40,
+                  backgroundImage: NetworkImage(profileData["profilePic"]),
+                ),
+                
+
+
+                
+              ],
+            ),
+          ),,
+    );
+  }
+}
